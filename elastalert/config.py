@@ -37,7 +37,8 @@ env_settings = {'ES_USE_SSL': 'use_ssl',
                 'ES_PASSWORD': 'es_password',
                 'ES_USERNAME': 'es_username',
                 'ES_HOST': 'es_host',
-                'ES_PORT': 'es_port'}
+                'ES_PORT': 'es_port',
+                'ES_URL_PREFIX': 'es_url_prefix'}
 
 env = Env(ES_USE_SSL=bool)
 
@@ -79,6 +80,7 @@ alerts_mapping = {
     'telegram': alerts.TelegramAlerter,
     'gitter': alerts.GitterAlerter,
     'servicenow': alerts.ServiceNowAlerter,
+    'alerta': alerts.AlertaAlerter,
     'post': alerts.HTTPPostAlerter
 }
 # A partial ordering of alert types. Relative order will be preserved in the resulting alerts list
